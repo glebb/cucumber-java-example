@@ -1,7 +1,5 @@
 def start_server
-	job1 = fork do 
-		exec('java Server')
-	end
+	job1 = spawn('java Server')
 	Process.detach(job1)
 end
 
